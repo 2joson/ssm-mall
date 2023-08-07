@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <!--将下划线映射为驼峰,spring配置文件中也能配置-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    <plugins>
+        <!--配置分页插件,spring配置文件中也能配置-->
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+    </plugins>
+<!--  properties typeAliases  environments mappers 都在spring。xml中集成了，可以注释掉-->
+<!--    <properties resource="jdbc.properties"/>-->
+<!--    <typeAliases>-->
+<!--        <package name=""/>-->
+<!--    </typeAliases>-->
+<!--&lt;!&ndash;    设置连接数据库的环境&ndash;&gt;-->
+<!--    <environments default="development">-->
+<!--        <environment id="development">-->
+<!--            <transactionManager type="JDBC"/>-->
+<!--            <dataSource type="POOLED">-->
+<!--                <property name="driver" value="${jdbc.driver}"/>-->
+<!--                <property name="url"-->
+<!--                          value="${jdbc.url}"/>-->
+<!--                <property name="username" value="${jdbc.username}"/>-->
+<!--                <property name="password" value="${jdbc.password}"/>-->
+<!--            </dataSource>-->
+<!--        </environment>-->
+<!--    </environments>-->
+<!--&lt;!&ndash;    引入映射文件&ndash;&gt;-->
+
+<!--    <mappers>-->
+<!--        <package name="com.atguigu.ssm.mapper"/>-->
+<!--    </mappers>-->
+</configuration>
